@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spelling Fun: Learn &amp; Play!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating decorations -->
+  <div class="deco" aria-hidden="true">
+    <span style="left:6%;top:8%">⭐</span><span style="left:88%;top:12%">✏️</span>
+    <span style="left:12%;top:80%">📚</span><span style="left:84%;top:78%">🎒</span>
+    <span style="left:48%;top:3%">🌈</span>
+  </div>
+
+  <!-- START SCREEN -->
+  <main id="startScreen" class="screen">
+    <div class="mascot big" aria-hidden="true">🐻</div>
+    <h1>Spelling Fun!</h1>
+    <p class="subtitle">Can you spell the word?</p>
+    <p class="label">Pick a level:</p>
+    <div class="levels" id="levelButtons">
+      <button class="level selected" data-level="easy">🌱 Easy<small>2–3 letters</small></button>
+      <button class="level" data-level="medium">🌼 Medium<small>4–5 letters</small></button>
+      <button class="level" data-level="challenge">🚀 Challenge<small>5–7 letters</small></button>
+    </div>
+    <button id="startBtn" class="btn big-btn green">▶ START GAME</button>
+    <p class="best">🏆 Best score: <b id="bestScore">0</b></p>
+  </main>
+
+  <!-- GAME SCREEN -->
+  <main id="gameScreen" class="screen hidden">
+    <div class="topbar">
+      <div class="pill">⭐ Score: <b id="score">0</b></div>
+      <div class="pill">Question <b id="qNum">1</b> / <b id="qTotal">10</b></div>
+      <div class="pill">🔥 Streak: <b id="streak">0</b></div>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+
+    <div class="card">
+      <div class="category" id="category"></div>
+      <div class="picture" id="picture">🐱</div>
+      <h2>Spell this word!</h2>
+      <button id="listenBtn" class="btn blue">🔊 LISTEN</button>
+      <div class="boxes" id="boxes"></div>
+      <div class="message" id="message" aria-live="polite"></div>
+      <div class="tiles" id="tiles"></div>
+      <div class="controls">
+        <button id="hintBtn" class="btn yellow">💡 HINT</button>
+        <button id="clearBtn" class="btn red">✖ CLEAR</button>
+        <button id="checkBtn" class="btn green">✔ CHECK ANSWER</button>
+      </div>
+    </div>
+    <div class="mascot small" id="mascotSmall" aria-hidden="true">🐻</div>
+  </main>
+
+  <!-- END SCREEN -->
+  <main id="endScreen" class="screen hidden">
+    <h1>🎊 Game Complete!</h1>
+    <div class="stars" id="stars"></div>
+    <p class="feedback" id="feedback"></p>
+    <div class="results">
+      <div class="pill">Final score: <b id="finalScore">0</b></div>
+      <div class="pill">Correct: <b id="correctCount">0</b> / <b id="totalCount">10</b></div>
+    </div>
+    <p id="newBest" class="best"></p>
+    <div class="badges" id="badges"></div>
+    <div class="controls">
+      <button id="againBtn" class="btn green">🔄 PLAY AGAIN</button>
+      <button id="levelBtn" class="btn blue">🎚️ CHANGE LEVEL</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
